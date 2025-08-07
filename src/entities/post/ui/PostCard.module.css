@@ -1,0 +1,23 @@
+.card {
+    padding: 16px;
+    border: 1px solid #655f53;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 360px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.content {
+    white-space: pre-line;
+    color: #7c7769;
+    font-size: 18px;
+}
