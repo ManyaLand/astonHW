@@ -8,6 +8,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body[data-theme='light'] {
+  --bg-color: #fff;
+  --text-color: #000;
+  --dark-gray: #655f53;
+  --light-gray: #f9f8f6;
+}
+
+body[data-theme='dark'] {
+  --bg-color: #111;
+  --text-color: #fff;
+  --dark-gray: #bebab1;
+  --light-gray: #eeece7;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
 html,
 body,
 #root {
