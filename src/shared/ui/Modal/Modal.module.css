@@ -11,6 +11,18 @@
 	z-index: 1000;
 }
 
+.title {
+	font-size: 24px;
+	margin: 0;
+	padding-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.body {
+	font-size: 20px;
+	padding-bottom: 16px;
+}
+
 .modal {
 	background-color: var(--bg-color);
 	padding: 16px 24px 20px;

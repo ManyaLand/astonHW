@@ -15,13 +15,15 @@ export const Header = () => {
 				<Button onClick={() => setModalOpen(true)}>О проекте</Button>
 			</div>
 
-			<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-				<h2 className={styles.title}>О проекте</h2>
-				<p className={styles.text}>
-					Это учебный React-проект для компании Aston с темами и
-					модальным окном.
-				</p>
-			</Modal>
+			<Modal.Root isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+				<Modal.Header>О проекте</Modal.Header>
+				<Modal.Body>
+					Это учебный React-проект для компании Aston с темами и модальным окном.
+				</Modal.Body>
+				<Modal.Footer>
+					<Button onClick={() => setModalOpen(false)}>Закрыть</Button>
+				</Modal.Footer>
+			</Modal.Root>
 		</header>
 	);
 };

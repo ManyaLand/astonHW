@@ -4,7 +4,7 @@ import { PostList } from "../widgets/PostList/PostList";
 export const App = () => {
 	return (
 		<MainLayout>
-			<PostList />
+			<PostList isLoading={false}/>
 		</MainLayout>
 	);
 };
