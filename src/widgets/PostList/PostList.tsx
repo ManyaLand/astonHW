@@ -1,5 +1,5 @@
 import { PostCard } from "../../entities/post/ui/PostCard";
-import { mockPosts } from "../../shared/data/posts";
+import { mockPosts } from "../../entities/post/mocks/posts";
 import styles from "./PostList.module.css";
 
 export const PostList = () => {
