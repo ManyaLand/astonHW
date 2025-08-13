@@ -7,12 +7,9 @@ type PostCardProps = {
 
 export const PostCard = ({ title, content }: PostCardProps) => {
 	return (
-		<>
-			<article className={styles.card}>
-				<h2 className={styles.title}>{title}</h2>
-				<p className={styles.content}>{content}</p>
-			</article>
-		</>
-	
+		<article className={styles.card}>
+			<h2 className={styles.title}>{title}</h2>
+			<p className={styles.content}>{content}</p>
+		</article>	
 	);
 };
