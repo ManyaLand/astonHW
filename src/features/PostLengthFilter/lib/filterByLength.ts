@@ -1,5 +1,11 @@
-import { mockPosts } from "../../../shared/data/posts";
 
-export function filterByLength(minLength: number) {
-  return mockPosts.filter((post) => post.title.length >= minLength);
+type Post = {
+  id: number,
+  title: string,
+  content: string,
+  comments: string[],
+}
+
+export function filterByLength(posts: Post[], minLength: number) {
+  return posts.filter((post) => post.title.length >= minLength);
 }
