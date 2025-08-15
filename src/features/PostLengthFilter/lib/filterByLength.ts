@@ -2,8 +2,7 @@
 type Post = {
   id: number,
   title: string,
-  content: string,
-  comments: string[],
+  body: string,
 }
 
 export function filterByLength(posts: Post[], minLength: number) {

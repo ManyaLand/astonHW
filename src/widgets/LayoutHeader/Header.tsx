@@ -3,13 +3,14 @@ import { Modal } from "../../shared/ui/Modal/Modal";
 import { ThemeSwitcher } from "../../features/ThemeSwitcher/ThemeSwitcher";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./Header.module.css";
-
+import { UserTabs } from "../../widgets/UserTabs/UserTabs"; 
 export const Header = () => {
 	const [isModalOpen, setModalOpen] = useState(false);
 
 	return (
 		<header className={styles.wrapper}>
 			<span className={styles.logo}>POSTS</span>
+			<UserTabs/>
 			<div className={styles.buttonsWrapper}>
 				<ThemeSwitcher />
 				<Button onClick={() => setModalOpen(true)}>О проекте</Button>

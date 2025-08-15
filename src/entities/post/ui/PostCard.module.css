@@ -3,7 +3,7 @@
     border: 1px solid #655f53;
     cursor: pointer;
     transition: transform 0.2s ease;
-    width: 360px;
+    width: 44%;
 }
 
 .card:hover {
@@ -11,13 +11,14 @@
 }
 
 .title {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .content {
     white-space: pre-line;
     color: #7c7769;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 0;
 }

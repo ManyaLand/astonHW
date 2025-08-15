@@ -1,13 +1,6 @@
-import { mockPosts } from '../entities/post/mocks/posts';
-import { MainLayout } from "../shared/layouts/MainLayout";
-import { Footer } from '../widgets/LayoutFooter/Footer';
-import { Header } from '../widgets/LayoutHeader/Header';
-import { PostList } from "../widgets/PostList/PostList";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./providers/router";
 
 export const App = () => {
-	return (
-		<MainLayout header={<Header />} footer={<Footer />}>
-			<PostList isLoading={false} posts={mockPosts}/>
-		</MainLayout>
-	);
+  return <RouterProvider router={router} />;
 };
