@@ -21,4 +21,14 @@
     color: #7c7769;
     font-size: 16px;
     margin: 0;
+    padding-bottom: 16px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.commentsSection {
+    margin-top: 16px;
 }

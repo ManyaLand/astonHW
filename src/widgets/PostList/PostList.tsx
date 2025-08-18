@@ -4,6 +4,7 @@ import { withLoading } from "../../shared/lib/hoc/withLoading";
 import { useCallback, useMemo, useState } from 'react';
 import { PostLengthFilter } from '../../features/PostLengthFilter/ui/PostLengthFilter';
 import { filterByLength } from '../../features/PostLengthFilter/lib/filterByLength';
+import { CommentList } from '../CommentList/ui/CommentList';
 
 type Post = {
   id: number,
@@ -31,6 +32,7 @@ const PostListBase = ({ posts }: PostListBaseProps) => {
 		    <div className={styles.wrapper}>
 				{filteredPosts.map((post) => (
 					<PostCard
+						commentList={<CommentList comments={post.comments}/>}
 						key={post.id}
 						{...post}
 					/>

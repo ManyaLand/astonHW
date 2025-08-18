@@ -1,3 +1,3 @@
 export const UserPhotosPage = () => {
-  return <div>User photos page</div>;
+  return <div>Страница фотографий пользователя</div>;
 };

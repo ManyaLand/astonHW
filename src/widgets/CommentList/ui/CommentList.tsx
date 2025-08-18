@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { Button } from '../../../shared/ui/Button/Button';
 
-type CommentListProps = { comments: string[] };
+type CommentListProps = { comments: any[] };
 
 export const CommentList = ({ comments }: CommentListProps) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -15,7 +15,7 @@ export const CommentList = ({ comments }: CommentListProps) => {
         {!collapsed && (
             <ul>
                 {comments.map((c, i) => (
-                    <li key={i}>{c}</li>
+                    <li key={i}>{c.body}</li>
                 ))}
             </ul>
         )}
