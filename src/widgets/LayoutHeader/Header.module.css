@@ -1,0 +1,34 @@
+.wrapper {
+    height: 64px;
+    border-bottom: 1px solid var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'gnf', sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+    color: var(--dark-gray);
+    font-size: 18px;
+}
