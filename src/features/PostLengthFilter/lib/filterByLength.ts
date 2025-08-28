@@ -1,4 +1,3 @@
-
 type Post = {
   id: number,
   title: string,

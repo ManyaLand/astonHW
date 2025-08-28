@@ -1,9 +1,9 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, memo } from "react";
 import { Button } from '../../../shared/ui/Button/Button';
 
 type CommentListProps = { comments: string[] };
 
-export const CommentList = ({ comments }: CommentListProps) => {
+export const CommentList = memo(({ comments }: CommentListProps) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggle = useCallback(() => {
@@ -24,4 +24,4 @@ export const CommentList = ({ comments }: CommentListProps) => {
         </Button>
     </>
   );
-};
+});
