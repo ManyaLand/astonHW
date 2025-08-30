@@ -4,7 +4,7 @@ import { Button } from '../../../shared/ui/Button/Button';
 import { Link } from 'react-router-dom';
 
 type PostCardProps = {
-	id: string;
+	id: string | number;
   	title: string;
   	body: string;
   	commentList: ReactNode;

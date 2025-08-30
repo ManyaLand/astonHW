@@ -1,6 +1,5 @@
-import type { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import styles from "./Modal.module.css";
 
-export const Footer = ({ children }: { children: ReactNode }) => (
-  <div className={styles.footer}>{children}</div>
-);
+export const Footer = ({ children }: PropsWithChildren) => 
+  <div className={styles.footer}>{children}</div>;

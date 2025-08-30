@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetTodosByUserQuery } from "../../entities/todo/api/todosApi";
+import type { Todo } from "../../entities/todo/model/types";
 
 export const UserTodosPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -12,12 +13,12 @@ export const UserTodosPage = () => {
   return (
     <>
       <h1>Список дел пользователя {userId}</h1>
-        {todos.map((todo) => (
-          <div key={todo.id}>
-            <input type="checkbox" checked={todo.completed} readOnly />
-            {todo.title}
-          </div>
-        ))}
+      {todos.map((todo: Todo) => (
+        <div key={todo.id}>
+          <input type="checkbox" checked={todo.completed} readOnly />
+          {todo.title}
+        </div>
+      ))}
     </>
   );
 };

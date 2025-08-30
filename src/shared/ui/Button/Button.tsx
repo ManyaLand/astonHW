@@ -1,15 +1,15 @@
-import type { ReactNode, MouseEventHandler } from "react";
+import type { PropsWithChildren, MouseEventHandler } from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = {
-	onClick?: MouseEventHandler<HTMLButtonElement>;
-	children: ReactNode;
-};
+type ButtonProps = PropsWithChildren<{
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit" | "reset";
+}>;
 
-export const Button = ({ onClick, children }: ButtonProps) => {
-	return (
-		<button className={styles.button} onClick={onClick}>
-			{children}
-		</button>
-	);
+export const Button = ({ onClick, children, type = "button" }: ButtonProps) => {
+  return (
+    <button className={styles.button} onClick={onClick} type={type}>
+      {children}
+    </button>
+  );
 };

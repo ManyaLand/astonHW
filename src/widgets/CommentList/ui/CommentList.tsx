@@ -3,7 +3,7 @@ import { useGetCommentsByPostQuery } from "../../../entities/comment/api/comment
 import { Button } from '../../../shared/ui/Button/Button';
 
 type CommentListProps = {
-  postId: number;
+  postId: number | string;
 };
 
 export const CommentList = ({ postId }: CommentListProps) => {
