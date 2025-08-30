@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 4px 8px;
+}
+
+.activeLink {
+    font-weight: 700;
+}
+
+.link:hover {
+    background: var(--light-gray);
+    font-weight: 600;
+}
