@@ -1,16 +1,20 @@
-import { useState, useCallback } from "react";
+import { useState } from 'react';
+import { useGetCommentsByPostQuery } from "../../../entities/comment/api/commentsApi";
 import { Button } from '../../../shared/ui/Button/Button';
 
-type CommentListProps = { comments: any[] };
+type CommentListProps = {
+  postId: number;
+};
 
-export const CommentList = ({ comments }: CommentListProps) => {
+export const CommentList = ({ postId }: CommentListProps) => {
+  const { data: comments = [], isLoading } = useGetCommentsByPostQuery(postId);
   const [collapsed, setCollapsed] = useState(true);
+  const toggle = () =>  {
+    setCollapsed((prev) => !prev); 
+  }
 
-  const toggle = useCallback(() => {
-    setCollapsed((prev) => !prev);
-  }, []);
-
-  return (
+  if (isLoading) return <p>Загрузка комментариев...</p>;
+    return (
     <>
         {!collapsed && (
             <ul>

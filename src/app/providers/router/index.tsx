@@ -1,4 +1,4 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import { MainLayout } from '../../../shared/layouts/MainLayout';
 import { Header } from '../../../widgets/LayoutHeader/Header';
 import { Footer } from '../../../widgets/LayoutFooter/Footer';
@@ -19,14 +19,14 @@ export const router = createBrowserRouter([
   {
     element: <LayoutWithHeaderFooter />,
     children: [
-        { index: true, element: <PostsPage />},
+        { index: true, element: <Navigate to="/posts" replace /> },
         { path: "/posts", element: <PostsPage /> },
         { path: "/posts/:id", element: <PostDetailsPage /> },
         { path: "/users/:id/posts", element: <UserPostsPage /> },
         { path: "/users/:id/albums", element: <UserAlbumsPage /> },
         { path: "/users/:id/todos", element: <UserTodosPage /> },
         { path: "/albums/:id/photos", element: <AlbumPhotosPage /> },
-
+        { path: "*", element: <Navigate to="/posts" replace /> },
     ],
   },
 ]);

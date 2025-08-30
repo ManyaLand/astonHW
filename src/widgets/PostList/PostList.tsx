@@ -32,7 +32,7 @@ const PostListBase = ({ posts }: PostListBaseProps) => {
 		    <div className={styles.wrapper}>
 				{filteredPosts.map((post) => (
 					<PostCard
-						commentList={<CommentList comments={post.comments}/>}
+						commentList={<CommentList postId={post.id} />}
 						key={post.id}
 						{...post}
 					/>
