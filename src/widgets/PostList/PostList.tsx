@@ -1,4 +1,3 @@
-import styles from "./PostList.module.css";
 import { withLoading } from "../../shared/lib/hoc/withLoading";
 import { useCallback, useMemo, useState } from "react";
 import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthFilter";
@@ -21,8 +20,8 @@ const PostListBase = ({ posts }: PostListBaseProps) => {
       <h1>Последние посты:</h1>
       <PostLengthFilter onFilterChange={handleFilterChange} />
       <ItemList<Post>
+        className={'wrapper'}
         items={filteredPosts}
-        className={styles.wrapper}
         getKey={(p) => p.id}
         renderItem={(post) => (
           <PostCard key={post.id} commentList={<CommentList postId={post.id} />} {...post} />

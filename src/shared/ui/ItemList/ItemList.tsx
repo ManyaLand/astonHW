@@ -1,5 +1,6 @@
-import { PropsWithChildren } from "react";
-
+import React from 'react';
+import { PropsWithChildren  } from "react";
+import styles from "./ItemsList.module.css";
 export type ItemRenderer<T> = (item: T) => React.ReactNode;
 
 export interface ItemListProps<T> {
@@ -11,9 +12,11 @@ export interface ItemListProps<T> {
 
 export function ItemList<T>({ items, renderItem, getKey, className }: PropsWithChildren<ItemListProps<T>>) {
   return (
-    <div className={className}>
+    <div className={className && styles[className]}>
       {items.map((item, i) => (
-        <div key={getKey(item, i)}>{renderItem(item)}</div>
+          <React.Fragment key={getKey(item, i)}>
+            {renderItem(item)}
+          </React.Fragment>
       ))}
     </div>
   );
